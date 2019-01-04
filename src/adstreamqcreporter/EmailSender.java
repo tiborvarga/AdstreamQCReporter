@@ -21,11 +21,9 @@ import javax.mail.internet.MimeMultipart;
 public class EmailSender {
     
     private final String hungaryEmail = "tibor.varga@adstream.com";
-    private final String italyEmail = "rossi46@subaruklub.hu";
-    private final String greeceEmail = "tibor.varga@adstream.com";
+    private final String italyEmail = "";
+    private final String greeceEmail = "";
     private String recipientsEmail = "";
-    private final String username = "tapirfilms@gmail.com";
-    private final String password = "Rossi1986";
     private static Properties mailServerProperties;
     private static Session getMailSession;
     private static MimeMessage generateMailMessage;
@@ -64,7 +62,8 @@ public class EmailSender {
 		generateMailMessage = new MimeMessage(getMailSession);
                 generateMailMessage.setFrom("QCreport.HU@adstream.com");
 		generateMailMessage.addRecipient(Message.RecipientType.TO, new InternetAddress(recipientsEmail));
-		generateMailMessage.addRecipient(Message.RecipientType.CC, new InternetAddress());
+                if (!recipientsEmail.equals(hungaryEmail))
+                    generateMailMessage.addRecipient(Message.RecipientType.CC, new InternetAddress(hungaryEmail));
 		generateMailMessage.setSubject("Adstream Hungary QC Report");
                 
                 // Create the message part 
