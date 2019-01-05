@@ -8,9 +8,9 @@
         </group>
         <group>
             <file>file:/Users/tiborvarga/NetBeansProjects/AdstreamQcReporter/src/adstreamqcreporter/EmailSender.java</file>
-            <file>file:/Users/tiborvarga/NetBeansProjects/AdstreamQcReporter/src/adstreamqcreporter/View.fxml</file>
+            <file>file:/Users/tiborvarga/NetBeansProjects/AdstreamQcReporter/src/adstreamqcreporter/PdfGenerator.java</file>
             <file>file:/Users/tiborvarga/NetBeansProjects/AdstreamQcReporter/src/adstreamqcreporter/ViewController.java</file>
-            <file>file:/Users/tiborvarga/NetBeansProjects/AdstreamQcReporter/src/adstreamqcreporter/DataFiller.java</file>
+            <file>file:/Users/tiborvarga/NetBeansProjects/AdstreamQcReporter/src/adstreamqcreporter/AdstreamQcReporter.java</file>
         </group>
     </open-files>
 </project-private>
