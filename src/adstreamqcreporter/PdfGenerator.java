@@ -33,7 +33,7 @@ public class PdfGenerator {
         try{
             PdfReader pdfTemplate = new PdfReader(getClass().getResourceAsStream("/QcReportSample.pdf"));
             FileOutputStream fileOutputStream = new FileOutputStream(pdfPathTemp, false);
-            ByteArrayOutputStream out = new ByteArrayOutputStream();
+            //ByteArrayOutputStream out = new ByteArrayOutputStream();
             PdfStamper stamper = new PdfStamper(pdfTemplate, fileOutputStream);
             stamper.setFormFlattening(true);
 

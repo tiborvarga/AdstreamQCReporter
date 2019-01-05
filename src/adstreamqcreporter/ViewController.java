@@ -1,5 +1,6 @@
 package adstreamqcreporter;
 
+import static adstreamqcreporter.DataFiller.dataFiller;
 import java.io.File;
 import java.net.URL;
 import java.util.List;
@@ -87,7 +88,12 @@ public class ViewController extends AdstreamQcReporter implements Initializable 
     }
     
     @FXML
-    private void attachButtonAction(ActionEvent event) {
+    private void fillButtonAction(ActionEvent event){        
+        dataFiller();
+    }
+    
+    @FXML
+    private void attachButtonAction(ActionEvent event) {   
         FileChooser filechooser = new FileChooser();
         filechooser.setTitle("Add attachments");
         Stage stage = (Stage)anchorPane.getScene().getWindow();
