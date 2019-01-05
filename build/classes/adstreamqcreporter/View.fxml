@@ -18,7 +18,6 @@
       <Pane id="basePane" fx:id="basePane" prefHeight="650.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="660.0" layoutX="-5.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="514.0" />
-            <Button id="fillButton" fx:id="fillButton" layoutX="384.0" layoutY="534.0" onAction="#fillButtonAction" text="Fill the datas" visible="false" />
             <Button id="resetButton" fx:id="resetButton" layoutX="412.0" layoutY="596.0" onAction="#resetButtonAction" text="Reset">
             </Button>
             <Button id="generateButton" fx:id="generateButton" layoutX="310.0" layoutY="596.0" onAction="#generateButtonAction" text="Generate">

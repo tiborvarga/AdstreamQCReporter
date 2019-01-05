@@ -1,6 +1,5 @@
 package adstreamqcreporter;
 
-import static adstreamqcreporter.DataFiller.dataFiller;
 import java.io.File;
 import java.net.URL;
 import java.util.List;
@@ -85,11 +84,6 @@ public class ViewController extends AdstreamQcReporter implements Initializable 
         basePane.setOpacity(1);
         alertPane.setVisible(false);
         alertText.setText("");
-    }
-    
-    @FXML
-    private void fillButtonAction(ActionEvent event){        
-        dataFiller();
     }
     
     @FXML
