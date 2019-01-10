@@ -186,8 +186,8 @@ public class ViewController extends AdstreamQcReporter implements Initializable 
                 j++;
             }
         
-        pdfPathTemp = "c:/adstream/QC_reports/" + pdfName + "_temp" + ".pdf";
-        pdfPathFinal = "c:/adstream/QC_reports/" + pdfName + "_QC_report" + ".pdf";     
+        pdfPathTemp = "f:/QC_reports/" + pdfName + "_temp" + ".pdf";
+        pdfPathFinal = "f:/QC_reports/" + pdfName + "_QC_report" + ".pdf";     
         }
         
         catch (Exception e){        

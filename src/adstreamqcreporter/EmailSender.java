@@ -20,7 +20,7 @@ import javax.mail.internet.MimeMultipart;
 
 public class EmailSender {
     
-    private final String hungaryEmail = "tibor.varga@adstream.com";
+    private final String hungaryEmail = "tvhu@adstream.com";
     private final String italyEmail = "";
     private final String greeceEmail = "";
     private String recipientsEmail = "";
