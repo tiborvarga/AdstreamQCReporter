@@ -100,12 +100,14 @@ public class ViewController extends AdstreamQcReporter implements Initializable 
     @FXML
     private void generateButtonAction(ActionEvent event){
         gatherFields();
+        if (!basePane.isDisabled()){
         PdfGenerator pg = new PdfGenerator();
         pg.generatePdf();
         pg.pdfAddPictures();
         EmailSender es = new EmailSender();
         es.emailSender();
         alertSent("The QC report has been sent to \n Adstream " + trafficTeamIn);
+        }
     }
     
     @FXML
@@ -133,7 +135,7 @@ public class ViewController extends AdstreamQcReporter implements Initializable 
         alertText.setText(text);
     }
     
-    private void alertSent(String text){
+    protected void alertSent(String text){
         basePane.setDisable(true);
         basePane.setOpacity(0.3);
         alertPane2.setVisible(true);
@@ -168,7 +170,7 @@ public class ViewController extends AdstreamQcReporter implements Initializable 
                 
         if (orderReferenceIn.length() < 1 || clockNumberIn.length() < 1 || clientIn.length() < 1 || brandIn.length() < 1 || productIn.length() < 1 || ingestOperatorIn.length() < 1){
             alert("The underlined fields are mandatory!");
-            return;
+            return;   
         }
         
         if (trafficTeamIn == null){
