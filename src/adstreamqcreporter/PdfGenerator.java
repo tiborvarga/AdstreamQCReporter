@@ -1,8 +1,7 @@
 package adstreamqcreporter;
 
 import static adstreamqcreporter.ViewController.audioTextIn;
-import static adstreamqcreporter.ViewController.brandIn;
-import static adstreamqcreporter.ViewController.clientIn;
+import static adstreamqcreporter.ViewController.advertiserIn;
 import static adstreamqcreporter.ViewController.clockNumberIn;
 import static adstreamqcreporter.ViewController.file;
 import static adstreamqcreporter.ViewController.ingestOperatorIn;
@@ -41,8 +40,7 @@ public class PdfGenerator {
 
             stamper.getAcroFields().setField("orderReference", orderReferenceIn);
             stamper.getAcroFields().setField("clockNumber", clockNumberIn);
-            stamper.getAcroFields().setField("client", clientIn);
-            stamper.getAcroFields().setField("brand", brandIn);
+            stamper.getAcroFields().setField("advertiser", advertiserIn);
             stamper.getAcroFields().setField("product", productIn);
             stamper.getAcroFields().setField("ingestOperator", ingestOperatorIn);
             stamper.getAcroFields().setField("video", videoTextIn);

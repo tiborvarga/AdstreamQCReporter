@@ -26,8 +26,7 @@ public class ViewController extends AdstreamQcReporter implements Initializable 
 //<editor-fold defaultstate="collapsed" desc="Class variables">
     protected static String orderReferenceIn;
     protected static String clockNumberIn;
-    protected static String clientIn;
-    protected static String brandIn;
+    protected static String advertiserIn;
     protected static String productIn;
     protected static String ingestOperatorIn;
     protected static String videoTextIn;
@@ -59,9 +58,7 @@ public class ViewController extends AdstreamQcReporter implements Initializable 
     @FXML
     private TextField clockNumber;
     @FXML
-    private TextField client;
-    @FXML
-    private TextField brand;
+    private TextField advertiser;
     @FXML
     private TextField product;
     @FXML
@@ -145,8 +142,7 @@ public class ViewController extends AdstreamQcReporter implements Initializable 
     private void gatherFields(){
         orderReferenceIn = "";
         clockNumberIn = "";
-        clientIn = "";
-        brandIn = "";
+        advertiserIn = "";
         productIn = "";
         ingestOperatorIn = "";
         videoTextIn = "";
@@ -159,8 +155,7 @@ public class ViewController extends AdstreamQcReporter implements Initializable 
         try{
          orderReferenceIn = orderReference.getText();
          clockNumberIn = clockNumber.getText();
-         clientIn = client.getText();
-         brandIn = brand.getText();
+         advertiserIn = advertiser.getText();
          productIn = product.getText();
          ingestOperatorIn = ingestOperator.getText();
          videoTextIn = videoText.getText();
@@ -168,7 +163,7 @@ public class ViewController extends AdstreamQcReporter implements Initializable 
          notesTextIn = notesText.getText();        
          trafficTeamIn = trafficTeam.getValue();       
                 
-        if (orderReferenceIn.length() < 1 || clockNumberIn.length() < 1 || clientIn.length() < 1 || brandIn.length() < 1 || productIn.length() < 1 || ingestOperatorIn.length() < 1){
+        if (orderReferenceIn.length() < 1 || clockNumberIn.length() < 1 || advertiserIn.length() < 1 || productIn.length() < 1 || ingestOperatorIn.length() < 1){
             alert("The underlined fields are mandatory!");
             return;   
         }

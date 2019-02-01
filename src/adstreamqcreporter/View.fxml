@@ -27,28 +27,29 @@
                   <Image url="/logo.png" />
                </image>
             </ImageView>
-            <Label layoutX="42.0" layoutY="103.0" text="Order reference:" underline="true" />
-            <Label layoutX="43.0" layoutY="155.0" text="Client:" underline="true" />
-            <Label layoutX="43.0" layoutY="129.0" text="Clock number:" underline="true" />
-            <Label layoutX="43.0" layoutY="180.0" text="Brand:" underline="true" />
-            <Label layoutX="43.0" layoutY="207.0" text="Product:" underline="true" />
+            <VBox layoutX="43.0" layoutY="103.0" prefHeight="149.0" prefWidth="100.0" spacing="9.0">
+               <children>
+                  <Label text="Order reference:" underline="true" />
+                  <Label text="Clock number:" underline="true" />
+                  <Label text="Advertiser:" underline="true" />
+                  <Label text="Product:" underline="true" />
+                  <Label text="Ingest operator:" underline="true" />
+               </children>
+            </VBox>
             <Label layoutX="126.0" layoutY="55.0" text="QC report generator">
                <font>
                   <Font name="System Bold" size="26.0" />
                </font>
             </Label>
-            <Label layoutX="43.0" layoutY="233.0" text="Ingest operator:" underline="true" />
             <TextField id="orderReference" fx:id="orderReference" layoutX="158.0" layoutY="98.0" prefHeight="27.0" prefWidth="322.0">             
             </TextField>
             <TextField id="clockNumber" fx:id="clockNumber" layoutX="158.0" layoutY="124.0" prefHeight="27.0" prefWidth="322.0">
             </TextField>
-            <TextField id="client" fx:id="client" layoutX="158.0" layoutY="150.0" prefHeight="27.0" prefWidth="322.0">
+            <TextField id="advertiser" fx:id="advertiser" layoutX="158.0" layoutY="150.0" prefHeight="27.0" prefWidth="322.0">
             </TextField>
-            <TextField id="brand" fx:id="brand" layoutX="158.0" layoutY="176.0" prefHeight="27.0" prefWidth="322.0">
+            <TextField id="product" fx:id="product" layoutX="158.0" layoutY="177.0" prefHeight="27.0" prefWidth="322.0">
             </TextField>
-            <TextField id="product" fx:id="product" layoutX="158.0" layoutY="202.0" prefHeight="27.0" prefWidth="322.0">
-            </TextField>
-            <TextField id="ingestOperator" fx:id="ingestOperator" layoutX="158.0" layoutY="228.0" prefHeight="27.0" prefWidth="322.0">
+            <TextField id="ingestOperator" fx:id="ingestOperator" layoutX="158.0" layoutY="204.0" prefHeight="27.0" prefWidth="322.0">
             </TextField>
             <TextArea id="videoText" fx:id="videoText" layoutX="158.0" layoutY="268.0" prefHeight="81.0" prefWidth="322.0">
             </TextArea>
