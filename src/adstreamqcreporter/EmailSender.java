@@ -49,10 +49,10 @@ public class EmailSender {
         emailRecipient();        
 	System.out.println("\n 1st ===> setup Mail Server Properties..");
 		mailServerProperties = System.getProperties();
-                mailServerProperties.put("mail.smtp.host", "smtp-internal.adstream.com");
-		mailServerProperties.put("mail.smtp.port", "25");
-		//mailServerProperties.put("mail.smtp.auth", "true");
-		//mailServerProperties.put("mail.smtp.starttls.enable", "true");
+                mailServerProperties.put("mail.smtp.host", "smtp.gmail.com");
+		mailServerProperties.put("mail.smtp.port", "587");
+		mailServerProperties.put("mail.smtp.auth", "true");
+		mailServerProperties.put("mail.smtp.starttls.enable", "true");
 		System.out.println("Mail Server Properties have been setup successfully..");
  
 		// Step2
@@ -60,7 +60,7 @@ public class EmailSender {
                 
 		getMailSession = Session.getDefaultInstance(mailServerProperties, null);
 		generateMailMessage = new MimeMessage(getMailSession);
-                generateMailMessage.setFrom("QCreport.HU@adstream.com");
+                generateMailMessage.setFrom("adstreamqc@gmail.com");
 		generateMailMessage.addRecipient(Message.RecipientType.TO, new InternetAddress(recipientsEmail));
                 if (!recipientsEmail.equals(hungaryEmail))
                     generateMailMessage.addRecipient(Message.RecipientType.CC, new InternetAddress(hungaryEmail));
@@ -94,13 +94,13 @@ public class EmailSender {
  
 		// Step3
 		System.out.println("\n\n 3rd ===> Get Session and Send mail");
-		/*Transport transport = getMailSession.getTransport("smtp");
  
-		// Enter your correct gmail UserID and Password
-		// if you have 2FA enabled then provide App Specific Password
-		transport.connect("smtp-internal.adstream.com", username, password);
-		transport.sendMessage(generateMailMessage, generateMailMessage.getAllRecipients());
-		transport.close();*/
+           try (Transport transport = getMailSession.getTransport("smtp")) {
+               // Enter your correct gmail UserID and Password
+               // if you have 2FA enabled then provide App Specific Password
+               transport.connect("smtp.gmail.com", "adstreamqc", "Adsupport1");
+               transport.sendMessage(generateMailMessage, generateMailMessage.getAllRecipients());
+           }
                 Transport.send(generateMailMessage);
                 }
        catch (MessagingException e){
